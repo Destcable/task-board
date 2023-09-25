@@ -34,6 +34,7 @@ const ButtonNoActive = styled.button`
 //  основной блок
 
 const BlockTaskBoard = styled.div`
+    display: flex;
     background-color: #131415;
     height: 100vh;
 `;
@@ -41,10 +42,20 @@ const BlockTaskBoard = styled.div`
 const BlockTask = styled.div`
     border: dashed #2C2E33;
     border-radius: 20px;
-    padding: 5px
+    padding: 10px
 `
-const ButtonAddTask = styled.div`
-
+const ButtonAddTask = styled.button`
+    display: flex;
+    border: none;
+    background-color: #1F2124;
+    border-radius: 15px;
+    width: 300px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    justify-content: space-between;
 `;
 
 const TaskBoard = (props: TaskBoardProps) => {
@@ -67,7 +78,7 @@ const TaskBoard = (props: TaskBoardProps) => {
                             </div>
                         </div>
 
-                        <div className='d-flex flex-nowrap'>
+                        <div className='d-flex flex-nowrap mt-3'>
                             <ButtonActive>Task</ButtonActive>
                             <ButtonNoActive>Timeline</ButtonNoActive>
                             <ButtonNoActive>File</ButtonNoActive>
@@ -88,7 +99,10 @@ const TaskBoard = (props: TaskBoardProps) => {
 
             <BlockTaskBoard className='ps-3 pt-3 pe-3'>
                 <BlockTask>
-                    132331
+                    <ButtonAddTask>
+                        <span className='text-white fs-5'>To-do</span>
+                        <span className='text-primary fs-5'>+</span>
+                    </ButtonAddTask>
                 </BlockTask>
             </BlockTaskBoard>
         </>
