@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import TaskBoardHeader from '../components/TaskBoard/TaskBoardHeader';
+import Task from '../components/TaskBoard/Task';
 
 interface TaskBoardProps {
     percentage: number
@@ -23,7 +24,7 @@ const ButtonAddTask = styled.button`
     border: none;
     background-color: #1F2124;
     border-radius: 15px;
-    width: 300px;
+    width: 325px;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
@@ -46,6 +47,7 @@ const TaskBoard = (props: TaskBoardProps) => {
                         <span className='text-white fs-5'>To-do</span>
                         <span className='text-primary fs-4'>+</span>
                     </ButtonAddTask>
+                    <Task />
                 </BlockTask>
             </BlockTaskBoard>
         </>
