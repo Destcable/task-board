@@ -1,9 +1,12 @@
 import styled from '@emotion/styled';
 import TaskBoardHeader from '../components/TaskBoard/TaskBoardHeader';
-import Task from '../components/TaskBoard/Task';
+import Task from '../components/TaskBoard/Task/Task';
 
 interface TaskBoardProps {
-    percentage: number
+    percentage: number,
+    tasks: { 
+        type: "UX Design" | "UI Design" | "QA" | "Developer"
+    }
 }
 
 //  основной блок
@@ -35,7 +38,6 @@ const ButtonAddTask = styled.button`
 
 const TaskBoard = (props: TaskBoardProps) => {
 
-
     return (
         <>
             <TaskBoardHeader 
@@ -47,7 +49,11 @@ const TaskBoard = (props: TaskBoardProps) => {
                         <span className='text-white fs-5'>To-do</span>
                         <span className='text-primary fs-4'>+</span>
                     </ButtonAddTask>
-                    <Task />
+                    <Task 
+                        tasks={{
+                            type: props.tasks.type
+                        }}
+                    />
                 </BlockTask>
             </BlockTaskBoard>
         </>
