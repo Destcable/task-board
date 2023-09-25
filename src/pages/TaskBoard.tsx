@@ -44,7 +44,7 @@ const TaskBoard = (props: TaskBoardProps) => {
                 <BlockTask>
                     <ButtonAddTask>
                         <span className='text-white fs-5'>To-do</span>
-                        <span className='text-primary fs-5'>+</span>
+                        <span className='text-primary fs-4'>+</span>
                     </ButtonAddTask>
                 </BlockTask>
             </BlockTaskBoard>
