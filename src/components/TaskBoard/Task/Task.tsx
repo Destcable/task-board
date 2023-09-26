@@ -25,7 +25,7 @@ const Task = (props: TaskProps) => {
     const typeColor = taskData.colorType;
 
     return( 
-        <TaskWrapper className='d-flex mt-4 rounded'>
+        <TaskWrapper className='d-flex mt-4 rounded p-3'>
             <TagBlock
                 className='d-flex justify-content-center '
                 style={{ 
