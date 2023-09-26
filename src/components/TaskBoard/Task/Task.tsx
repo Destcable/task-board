@@ -12,19 +12,23 @@ const TaskWrapper = styled.div`
     background-color: #1F2124;
 `;
 
-const TagBlock = styled.div(props => ({
-    color: props.color
-}));
+const TagBlock = styled.div`
+`;
 
 const Task = (props: TaskProps) => {
     const taskData = TaskController({
         tasks: props.tasks
     });
 
+    const typeColor = taskData.colorType;
+
     return( 
         <TaskWrapper>
             <TagBlock
-                color={taskData.colorType}
+                style={{ 
+                    color: `rgb(${typeColor.r}, ${typeColor.g}, ${typeColor.b}`,
+                    backgroundColor: `rgba(${typeColor.r}, ${typeColor.g}, ${typeColor.b}, 0.2)`
+                }}
             >
                 <span>{props.tasks.type}</span>
             </TagBlock>
