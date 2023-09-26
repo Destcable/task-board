@@ -27,6 +27,6 @@ function adjustHexToRGB(color: string) {
     const b = parseInt(color.slice(5, 7), 16);
   
     return ({r,g,b});
-  }
+}
 
 export default TaskController;
