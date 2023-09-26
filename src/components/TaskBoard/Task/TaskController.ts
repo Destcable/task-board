@@ -1,7 +1,14 @@
 import type { Task as TaskType } from "../../../types/Task";
-import eColorType from "../../../UI.config";
+
 interface TaskControllerProps { 
     tasks: TaskType
+}
+
+enum eColorType { 
+    "UX Design" = "#36ACFF",
+    "UI Design" = "#084DC6",
+    "QA" = "#FD7C33",
+    "Developer" = "#5BE18A"
 }
 
 const TaskController = (props: TaskControllerProps) => { 
