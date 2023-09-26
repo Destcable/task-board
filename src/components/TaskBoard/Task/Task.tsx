@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
 import TaskController from './TaskController';
+import type { Task as TaskType } from "../../../types/Task";
 
 interface TaskProps { 
-    tasks: { 
-        type: "UX Design" | "UI Design" | "QA" | "Developer"
-    }
+    tasks: TaskType
 }
 
 

@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <TaskBoard 
       percentage={60}
       tasks={{
-        type: "UX Design"
+        type: "Developer"
       }}
     />
   </React.StrictMode>,

@@ -1,12 +1,10 @@
 import styled from '@emotion/styled';
 import TaskBoardHeader from '../components/TaskBoard/TaskBoardHeader';
 import Task from '../components/TaskBoard/Task/Task';
-
+import type { Task as TaskType } from '../types/Task';
 interface TaskBoardProps {
     percentage: number,
-    tasks: { 
-        type: "UX Design" | "UI Design" | "QA" | "Developer"
-    }
+    tasks: TaskType
 }
 
 //  основной блок

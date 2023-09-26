@@ -1,7 +1,7 @@
+import type { Task as TaskType } from "../../../types/Task";
+
 interface TaskControllerProps { 
-    tasks: { 
-        type: "UX Design" | "UI Design" | "QA" | "Developer"
-    }
+    tasks: TaskType
 }
 
 enum eColorType { 
