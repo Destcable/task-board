@@ -11,13 +11,14 @@ enum eColorType {
     "Developer" = "#5BE18A"
 }
 
-function TaskController(props: TaskControllerProps) { 
-    const colorType: string;
+const TaskController = (props: TaskControllerProps) => { 
     const typeTask = props.tasks.type;
+
+    const colorType = eColorType[typeTask]
     
-    return { 
-        colorType: "wadw"
-    }
+    return ({ 
+        colorType: colorType
+    })
 };
 
 export default TaskController;

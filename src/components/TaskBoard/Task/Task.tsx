@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import TaskController from './TaskController';
 
 interface TaskProps { 
     tasks: { 
@@ -12,15 +13,20 @@ const TaskWrapper = styled.div`
     background-color: #1F2124;
 `;
 
-const TagBlock = styled.div`
-    color
-`;
+const TagBlock = styled.div(props => ({
+    color: props.color
+}));
 
 const Task = (props: TaskProps) => {
+    const taskData = TaskController({
+        tasks: props.tasks
+    });
 
     return( 
         <TaskWrapper>
-            <TagBlock>
+            <TagBlock
+                color={taskData.colorType}
+            >
                 <span>{props.tasks.type}</span>
             </TagBlock>
         </TaskWrapper>
