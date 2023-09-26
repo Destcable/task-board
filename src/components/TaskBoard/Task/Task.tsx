@@ -6,13 +6,15 @@ interface TaskProps {
     tasks: TaskType
 }
 
-
 const TaskWrapper = styled.div`
     width: 325px;
     background-color: #1F2124;
 `;
 
 const TagBlock = styled.div`
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50px;
 `;
 
 const Task = (props: TaskProps) => {
@@ -23,8 +25,9 @@ const Task = (props: TaskProps) => {
     const typeColor = taskData.colorType;
 
     return( 
-        <TaskWrapper>
+        <TaskWrapper className='d-flex mt-4 rounded'>
             <TagBlock
+                className='d-flex justify-content-center '
                 style={{ 
                     color: `rgb(${typeColor.r}, ${typeColor.g}, ${typeColor.b}`,
                     backgroundColor: `rgba(${typeColor.r}, ${typeColor.g}, ${typeColor.b}, 0.2)`
